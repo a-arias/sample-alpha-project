@@ -3,10 +3,10 @@
     :key="commit.sha"
     @click="goToDetails"
   >
-    <td v-text="commit.author.login" />
-    <td v-text="commit.sha" />
-    <td v-text="commit.commit.message" />
-    <td v-text="commit.commit.author.date" />
+    <td data-test-id="commitAuthor" v-text="commit.author.login" />
+    <td data-test-id="commitSha" v-text="commit.sha" />
+    <td data-test-id="commitMessage" v-text="commit.commit.message" />
+    <td data-test-id="commitAuthorDate" v-text="commit.commit.author.date" />
     <!-- <td v-text="'Author'" />
     <td v-text="'abcdefabcdefabcdefabcdefabcdefabcdef'" />
     <td v-text="'Commit Message'" />
