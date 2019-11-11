@@ -18,6 +18,7 @@
             placeholder="Search by contributor..."
             style="padding-top:30px;"
             @change="debounceSearch"
+            data-test-id="contributorsList"
           />
           <v-text-field
             v-model="sha"
@@ -29,6 +30,7 @@
             placeholder="Search by SHA..."
             single-line
             @input="debounceSearch"
+            data-test-id="shaInput"
           />
           <v-tooltip
             bottom
@@ -61,6 +63,7 @@
       </v-flex>
       <v-flex xs2>
         <v-btn
+        data-test-id="buttonPreviousPage"
           block
           color="primary"
           :disabled="disablePrevious"
@@ -81,6 +84,7 @@
       </v-flex>
       <v-flex xs2>
         <v-btn
+          data-test-id="buttonNextPage"
           block
           color="primary"
           @click="changePage(++page)"

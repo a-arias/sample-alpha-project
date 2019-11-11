@@ -90,7 +90,10 @@
                   v-for="file in details.files"
                   :key="file.sha"
                 >
-                  <v-list-tile-content v-text="file.filename" />
+                  <v-list-tile-content
+                  data-test-id="changedFileText"
+                  v-text="file.filename"
+                  />
                 </v-list-tile>
               </v-list>
             </div>

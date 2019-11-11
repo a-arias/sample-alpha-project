@@ -5,6 +5,7 @@
     </v-toolbar-title>
     <v-spacer />
     <v-btn
+      data-test-id="loginButton"
       @click="requestLogin"
       v-text="'GitHub Login'"
     />
